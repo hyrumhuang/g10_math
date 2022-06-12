@@ -35,7 +35,17 @@ def standardlize(ary):
         l.append(round(standardization, 1))
 
     return l
-    
+
+
+def relativeCoeff(ary1, ary2):
+    aryNew1 = standardlize(ary1)
+    aryNew2 = standardlize(ary2)
+    total = 0;
+    elmNum = len(aryNew1)
+    for i in range(elmNum):
+        total = total + ( ary1[i] * ary2[i])
+
+    return (total / elmNum)
 
 # 主程式
 def main():
